@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    transition: all .8s ease-in-out;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: #00002e;
+    /*#e8001a #000036*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pw-container {
+    min-width: 180px;
+    max-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pw-container > .pw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    max-width: 200px;
+}
+
+
+.pw-container > .pw > input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+
+    background-color: transparent;
+    color: #fff;
+
+    position: relative;
+}
+
+.pw-container > .pw > input::placeholder {
+    color: #fff;
+    font-weight: 600;
+}
+
+.pw-container > .pw::before {
+    content: '';
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+
+    background-color: #808080;
+}
+
+/* .pw-container > .pw::after {
+    content: '';
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+
+    background-color: #fff;
+}
+
+input.pw:focus ~ .pw-container > .pw::after {
+    width: 100%;
+
+    background-color: #f2f;
+} */
+
+.pw-container > .pw > span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+
+    background-color: #fff;
+}
+
+.pw-container > .pw > input:focus + span {
+    width: 100%;
+}
+
+.pw-container > .pw > input:focus {
+    border: none;
+    outline: none;
+}
+
+
+/* love */
+div.pw-container.love > div.pw-text {
+    margin: 20px 0;
+    padding: 15px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+
+div.pw-container.love > div.pw-text > p {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.pw-container.love > .pw > input + span {
+    width: 100%;
+}
